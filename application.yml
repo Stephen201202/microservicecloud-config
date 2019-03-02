@@ -5,13 +5,13 @@ spring:
 ---
 spring: 
     profiles: dev
-      application: 
+      application:
         name: microservicecloud-config-dev
 
 ---
 spring: 
   profiles: test 
-    application: 
-      name: microservicecloud-config-test
+    application:
+        name: microservicecloud-config
 
 # 以UTF-8的格式保存

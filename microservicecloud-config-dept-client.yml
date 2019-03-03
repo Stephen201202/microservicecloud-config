@@ -28,6 +28,11 @@ eureka:
   instance:
     instance-id: microservicecloud-dept8001  #自定义服务名称信息
     prefer-ip-address: true     #访问路径可以显示IP地址
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.quhao.study .entity    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 
 info:
   app.name: cn21-microservicecloud
@@ -53,7 +58,12 @@ spring:
           initial-size: 5
           max-total: 5
           max-wait-millis: 200
-
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.quhao.study .entity    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+  
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
